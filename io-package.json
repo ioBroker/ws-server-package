@@ -1,0 +1,223 @@
+{
+  "common": {
+    "name": "ws",
+    "version": "4.1.0",
+    "titleLang": {
+      "en": "Native Web socket",
+      "de": "Native Web socket",
+      "ru": "Native Web socket",
+      "pt": "Native Web socket",
+      "nl": "Native Web socket",
+      "fr": "Native Web socket",
+      "it": "Native Web socket",
+      "es": "Native Web socket",
+      "pl": "Native Web socket",
+      "uk": "Native Web socket",
+      "zh-cn": "Native Web socket"
+    },
+    "desc": {
+      "en": "This adapter allows to communicate different web applications with ioBroker via pure web sockets. Not socket.io",
+      "de": "Dieser Adapter ermöglicht die Kommunikation verschiedener Web-Anwendungen mit ioBroker",
+      "ru": "Этот адаптер позволяет соединяться различным веб-приложениям с ioBroker",
+      "pt": "Este adaptador permite comunicar diferentes aplicativos da web com ioBroker",
+      "nl": "Met deze adapter kunt u verschillende webtoepassingen communiceren met ioBroker",
+      "fr": "Cet adaptateur permet de communiquer différentes applications web avec ioBroker",
+      "it": "Questo adattatore consente di comunicare diverse applicazioni Web con ioBroker",
+      "es": "Este adaptador permite comunicar diferentes aplicaciones web con ioBroker",
+      "pl": "Ten adapter umożliwia komunikację z różnymi aplikacjami WWW za pomocą ioBroker",
+      "uk": "Цей адаптер дозволяє спілкуватися різним веб-додаткам з ioBroker",
+      "zh-cn": "该适配器允许与ioBroker通信不同的Web应用程序"
+    },
+    "news": {
+      "4.1.0": {
+        "en": "Updated packages\nFixed possible bugs",
+        "de": "Aktualisierte Pakete\nMögliche Fehler behoben",
+        "ru": "Обновленные пакеты\nИсправленные возможные баги",
+        "pt": "Pacotes atualizados\nCorrigidos possíveis erros",
+        "nl": "Bijgewerkte pakketten\nVaste mogelijke bugs",
+        "fr": "Paquets mis à jour\nCorrection des bugs possibles",
+        "it": "Pacchetti aggiornati\nCorretti possibili bug",
+        "es": "Paquetes actualizados\nErrores fijos posibles",
+        "pl": "Aktualizacja pakietów\nNaprawiono możliwe błędy",
+        "uk": "Оновлені пакети\nВиправлено можливі помилки",
+        "zh-cn": "更新软件包\n固定可能的错误"
+      },
+      "4.0.0": {
+        "en": "Updated packages\nRemoved support for node.js 18",
+        "de": "Aktualisierte Pakete\nEntfernte Unterstützung für node.js 18",
+        "ru": "Обновленные пакеты\nСнята поддержка node.js 18",
+        "pt": "Pacotes atualizados\nSuporte removido para node.js 18",
+        "nl": "Bijgewerkte pakketten\nOndersteuning voor node.js 18 verwijderd",
+        "fr": "Paquets mis à jour\nSupport supprimé pour node.js 18",
+        "it": "Pacchetti aggiornati\nSupporto rimosso per node.js 18",
+        "es": "Paquetes actualizados\nApoyo eliminado para node.js 18",
+        "pl": "Aktualizacja pakietów\nUsunięte wsparcie dla node.js 18",
+        "uk": "Оновлені пакети\nВидалити підтримку для node.js 18",
+        "zh-cn": "更新软件包\n删除对节点.js 18 的支持"
+      },
+      "3.0.19": {
+        "en": "Removed the frequent debug output",
+        "de": "Entfernen der häufigen Debug-Ausgabe",
+        "ru": "Снят частый вывод отладки",
+        "pt": "Removido a saída de depuração frequente",
+        "nl": "De frequente debug-uitvoer is verwijderd",
+        "fr": "Supprimé la sortie de débogage fréquente",
+        "it": "Rimozione dell'uscita di debug frequente",
+        "es": "Eliminar la producción de depuración frecuente",
+        "pl": "Usunięto częste wyjście debugowania",
+        "uk": "Вилучено часте дебвуг",
+        "zh-cn": "删除频繁调试输出"
+      },
+      "3.0.18": {
+        "en": "Corrected the problem with the user rights",
+        "de": "Das Problem mit den Nutzerrechten korrigiert",
+        "ru": "Исправлена проблема с правами пользователя",
+        "pt": "Corrigido o problema com os direitos do usuário",
+        "nl": "Het probleem met de gebruikersrechten verhelpen",
+        "fr": "Correction du problème des droits d'utilisateur",
+        "it": "Corretto il problema con i diritti dell'utente",
+        "es": "Corregido el problema con los derechos del usuario",
+        "pl": "Naprawiono problem z prawami użytkownika",
+        "uk": "Виправлено проблему з правами користувачів",
+        "zh-cn": "纠正了用户权利的问题"
+      },
+      "3.0.17": {
+        "en": "Added OAuth2 authentication",
+        "de": "OAuth2 Authentifizierung hinzugefügt",
+        "ru": "Проверка подлинности OAuth2",
+        "pt": "Autenticação de OAuth2 adicionada",
+        "nl": "OAuth2-authenticatie toegevoegd",
+        "fr": "Ajout de l'authentification OAuth2",
+        "it": "Aggiunta autenticazione OAuth2",
+        "es": "Autenticación OAuth2",
+        "pl": "Dodano uwierzytelnianie OAuth2",
+        "uk": "Додано автентифікацію OAuth2",
+        "zh-cn": "添加 OAuth2 认证"
+      },
+      "3.0.5": {
+        "en": "Corrected address detection\nCorrected language settings",
+        "de": "Korrigierte Adresserkennung\nKorrigierte Spracheinstellungen",
+        "ru": "Исправленное обнаружение адреса\nИсправленные языковые настройки",
+        "pt": "Detecção de endereços corrigida\nDefinições de linguagem corretas",
+        "nl": "Gecorrigeerde adresdetectie\nGecorrigeerde taalinstellingen",
+        "fr": "Détection d'adresses corrigée\nRéglages de langue corrigés",
+        "it": "Rilevamento corretto degli indirizzi\nImpostazioni linguistiche corrette",
+        "es": "Detección de direcciones corregida\nAjustes de idiomas corregidos",
+        "pl": "Poprawione wykrywanie adresów\nSkorygowane ustawienia językowe",
+        "uk": "Правильне виявлення адреси\nВиправлені налаштування мови",
+        "zh-cn": "纠正地址检测\n校正语言设置"
+      },
+      "3.0.4": {
+        "en": "Adapter was rewritten in TypeScript",
+        "de": "Adapter wurde in TypeScript neu geschrieben",
+        "ru": "Адаптер был переписан в TypeScript",
+        "pt": "Adapter foi reescrito no TypeScript",
+        "nl": "Adapter is herschreven in TypeScript",
+        "fr": "Adaptateur a été réécrit dans TypeScript",
+        "it": "L'adattatore è stato riscritto in TypeScript",
+        "es": "Adaptador fue reescrito en TipoScript",
+        "pl": "Adapter został przepisany w TypeScript",
+        "uk": "Адаптер був записаний у TypeScript",
+        "zh-cn": "适配器在类型脚本中重写"
+      }
+    },
+    "authors": [
+      "bluefox <dogafox@gmail.com>"
+    ],
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "loglevel": "info",
+    "readme": "https://github.com/ioBroker/ioBroker.ws/blob/master/README.md",
+    "icon": "ws.svg",
+    "messagebox": true,
+    "keywords": [
+      "web",
+      "web socket",
+      "communication"
+    ],
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/master/admin/ws.svg",
+    "type": "communication",
+    "stopBeforeUpdate": true,
+    "adminUI": {
+      "config": "json"
+    },
+    "compact": true,
+    "stopTimeout": 5000,
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.6.17"
+      }
+    ],
+    "restartAdapters": [
+      "web"
+    ],
+    "plugins": {
+      "sentry": {
+        "dsn": "https://3f4953a5e15d4ff2a381affb010d0778@sentry.iobroker.net/170"
+      }
+    },
+    "connectionType": "local",
+    "dataSource": "push",
+    "tier": 3,
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    }
+  },
+  "native": {
+    "port": 8084,
+    "auth": false,
+    "secure": false,
+    "bind": "0.0.0.0",
+    "ttl": 3600,
+    "certPublic": "",
+    "certPrivate": "",
+    "certChained": "",
+    "defaultUser": "admin",
+    "leEnabled": false,
+    "leUpdate": false,
+    "leCheckPort": 80
+  },
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connected",
+      "type": "state",
+      "common": {
+        "role": "state",
+        "name": "Info about connected socket clients",
+        "type": "string",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "If web server started",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}
