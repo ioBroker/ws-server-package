@@ -84,7 +84,7 @@ Every data point has a `q` (quality) attribute.
 -->
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 5.0.1 (2026-06-20)
 * (@GermanBluefox) Initial commit. Extracted the socket implementation from the `ioBroker.ws` adapter into a shared library
 
 ## License
