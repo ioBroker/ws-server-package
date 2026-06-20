@@ -47,8 +47,8 @@
     "bugs": {
         "url": "https://github.com/ioBroker/ws-server-package/issues"
     },
-    "main": "build/main.js",
-    "types": "build/types.d.ts",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
     "exports": {
         ".": {
             "types": "./build/index.d.ts",
