@@ -28,9 +28,11 @@ export declare class SocketWS extends SocketCommon {
      * it wins), then registers the passport-based cookie/session check — unless the deployment uses
      * OAuth2 exclusively, in which case no cookie middleware is needed.
      *
-     * @param authOptions Authentication configuration: `store` (session store for cookie lookup),
-     *  `secret` (used to parse/verify the signed session cookie), `oauth2Only` (when `true`, skip the
-     *  cookie/passport middleware entirely) and `checkUser` (optional username/password verification callback).
+     * @param authOptions Authentication configuration.
+     * @param authOptions.store The session store used to look up the session referenced by the cookie.
+     * @param authOptions.secret Secret used to parse/verify the signed session cookie.
+     * @param authOptions.oauth2Only When `true`, skip the cookie/passport middleware entirely.
+     * @param authOptions.checkUser Optional username/password verification callback.
      */
     __initAuthentication(authOptions: {
         store: Store;
