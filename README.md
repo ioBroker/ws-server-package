@@ -41,13 +41,13 @@ The supported client-facing methods (the actual WebSocket protocol) are implemen
 
 ### Exports
 
-| Export | Description |
-|---|---|
-| `IOSocketClass` | High-level wrapper an adapter instantiates (see above). |
-| `SocketWS` | The `SocketCommon` subclass that implements the WS-specific auth, sessions and broadcasting. Use directly only for advanced cases. |
-| `WebSocketClient` | Type of a single client connection (re-exported from the `@iobroker/ws-server` transport). |
-| `WsConfig` | Type of the adapter `native` configuration (port, auth, secure, TLS certs, …). |
-| `./socket.io.js` | The bundled `@iobroker/ws` browser client, so the consuming adapter can serve it to browsers. |
+| Export            | Description                                                                                                                        |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| `IOSocketClass`   | High-level wrapper an adapter instantiates (see above).                                                                            |
+| `SocketWS`        | The `SocketCommon` subclass that implements the WS-specific auth, sessions and broadcasting. Use directly only for advanced cases. |
+| `WebSocketClient` | Type of a single client connection (re-exported from the `@iobroker/ws-server` transport).                                         |
+| `WsConfig`        | Type of the adapter `native` configuration (port, auth, secure, TLS certs, …).                                                     |
+| `./socket.io.js`  | The bundled `@iobroker/ws` browser client, so the consuming adapter can serve it to browsers.                                      |
 
 ## ioBroker concepts
 
@@ -84,6 +84,9 @@ Every data point has a `q` (quality) attribute.
 -->
 
 ## Changelog
+### **WORK IN PROGRESS**
+* (@GermanBluefox) Updated `@iobroker/ws-server` library
+
 ### 5.0.2 (2026-06-20)
 * (@GermanBluefox) Initial commit. Extracted the socket implementation from the `ioBroker.ws` adapter into a shared library
 
