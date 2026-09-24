@@ -38,12 +38,26 @@ When changing behavior, first check whether the logic belongs in `SocketCommon` 
 npm run build      # tsc -p tsconfig.build.json, then `node tasks.mts`
 npm run lint       # eslint -c eslint.config.mjs
 npm test           # alias for test:integration (mocha --exit)
-npm run test:package      # mocha test/testPackage.js --exit
+npm run test:package      # no-op stub, kept for the ioBroker CI actions
 ```
 
 Run a single mocha test file: `npx mocha <path> --exit` (add `--grep "<name>"` to filter).
 
-`tasks.mts` runs after `tsc`: it writes the bundled `@iobroker/ws` browser client to `build/lib/socket.io.js` (exposed via the `./socket.io.js` package export) and copies `src/types.d.ts` to `build/types.d.ts`. Build output goes to `build/` (gitignored). Note: there is currently no `test/` directory — the `test:*` scripts are inherited from the adapter and have nothing to run yet.
+**The tests run against `build/`, so `npm run build` must have run first** (CI does it via `ioBroker/testing-action-adapter`). `test/index.js` even asserts on the build artifacts, so a stale build fails loudly instead of silently testing old code.
+
+Test layout:
+
+- `test/index.js` — the public export surface and the package `exports` map.
+- `test/socketWS.js` — unit tests for `SocketWS` (auth wiring, session id, the `publish*All` loops) with fake sockets/server.
+- `test/socket.js` — the `IOSocketClass` facade on a real HTTP server (construction, delegation, `close`).
+- `test/integration.js` — end-to-end with the real transport and the real browser client `@iobroker/ws`.
+- `test/lib/helpers.js` — mock adapter, session store, fake socket/server; `test/lib/client.js` — promise wrapper around the browser client. Mocha does not pick up `test/lib/` (its default spec glob is not recursive).
+
+The tests need `iobroker.js-controller` as a dev dependency: `@iobroker/socket-classes` pulls in `@iobroker/adapter-core`, which exits the process with "Cannot find js-controller" when it cannot resolve it. Its install drops `controller.js` and `iobroker-data/` into the repo root; both are git- and eslint-ignored.
+
+In the browser client, `close()` **reconnects** — only `destroy()` (or `close(true)`) really ends a connection. A test that gets this wrong leaves a reconnect loop behind and mocha never exits.
+
+`tasks.mts` runs after `tsc`: it writes the bundled `@iobroker/ws` browser client to `build/lib/socket.io.js` (exposed via the `./socket.io.js` package export) and copies `src/types.d.ts` to `build/types.d.ts`.
 
 ## Conventions
 

@@ -13,7 +13,17 @@ export default [
         },
     },
     {
-        ignores: ['build/*', 'eslint.config.mjs', 'prettier.config.mjs', "tasks.mts"],
+        // `controller.js` and `iobroker-data` are created by the "iobroker.js-controller" dev dependency
+        ignores: [
+            'build/*',
+            'test/*',
+            'test/lib/*',
+            'controller.js',
+            'iobroker-data/*',
+            'eslint.config.mjs',
+            'prettier.config.mjs',
+            'tasks.mts',
+        ],
     },
     {
         // disable temporary the rule 'jsdoc/require-param' and enable 'jsdoc/require-jsdoc'

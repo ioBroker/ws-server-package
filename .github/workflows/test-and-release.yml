@@ -33,10 +33,29 @@ jobs:
               with:
                   node-version: '24.x'
                   lint: true
+                  test-command: 'false' # the tests need the build, they run in the job below
+
+    # Runs the mocha tests against the compiled library
+    tests:
+        if: contains(github.event.head_commit.message, '[skip ci]') == false
+
+        needs: [check-and-lint]
+
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [22.x, 24.x]
+
+        steps:
+            - uses: ioBroker/testing-action-adapter@v1
+              with:
+                  build: true
+                  os: 'ubuntu-latest'
+                  node-version: ${{ matrix.node-version }}
 
     # Deploys the final package to NPM
     deploy:
-        needs: [check-and-lint]
+        needs: [check-and-lint, tests]
 
         # Permissions are required to create GitHub releases and npm trusted publishing
         permissions:

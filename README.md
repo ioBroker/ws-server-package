@@ -84,6 +84,10 @@ Every data point has a `q` (quality) attribute.
 -->
 
 ## Changelog
+### **WORK IN PROGRESS**
+* (@GermanBluefox) Updated `@iobroker/ws-server` library
+* (@GermanBluefox) Added tests
+
 ### 5.0.4 (2026-08-31)
 * (@GermanBluefox) Updated `@iobroker/ws-server` library
 
