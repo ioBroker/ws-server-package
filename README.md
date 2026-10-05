@@ -84,8 +84,11 @@ Every data point has a `q` (quality) attribute.
 -->
 
 ## Changelog
+### **WORK IN PROGRESS**
+* (@GermanBluefox) Updated packages
+
 ### 5.0.6 (2026-10-02)
-- (@GermanBluefox) Fixed: a websocket whose access token was not accepted stayed open without a single
+* (@GermanBluefox) Fixed: a websocket whose access token was not accepted stayed open without a single
   command handler, so the client could not announce the token it had just fetched and waited for an answer
   that could not come until its own timeout closed the connection. With authentication enabled, every page
   behind this server took seconds to come up after the access token had expired and sometimes did not come
