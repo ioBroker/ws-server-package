@@ -1,6 +1,6 @@
 {
   "name": "@iobroker/ws-server-library",
-  "version": "5.0.7",
+  "version": "5.0.8",
   "description": "This package allows to communicate different web applications with ioBroker.",
   "author": {
     "name": "bluefox",
